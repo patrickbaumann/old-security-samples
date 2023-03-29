@@ -1,0 +1,51 @@
+<resources>
+    <string name="app_name">App Installer</string>
+    <string name="title_library">Demo Store</string>
+    <string name="title_settings">Settings</string>
+
+    <string name="permission_description">To be able to use the store, we need to request the install permission to add apps to your device</string>
+    <string name="request_permission_label">Request Permission</string>
+    <string name="authorization_dialog_title">Authorization</string>
+    <string name="authorization_dialog_description">App Installer needs this special permission to be install other apps</string>
+    <string name="authorization_dialog_confirm_label">OK</string>
+    <string name="authorization_dialog_learn_more_label">Learn More</string>
+
+    <string name="refresh_action_label">Refresh</string>
+    <string name="install_label">Install</string>
+    <string name="cancel_install_label">Cancel</string>
+    <string name="open_app_install">Open</string>
+    <string name="uninstall_label">Uninstall</string>
+    <string name="upgrade_label">Upgrade</string>
+    <string name="update_available_status">&#9679; Update available</string>
+    <string name="feature_not_implemented">Feature not implemented yet</string>
+
+    <string name="installing_notification_title">Installing %s</string>
+    <string name="installing_notification_cancel_label">Cancel</string>
+
+    <string name="autoupdate_settings_description">DemoStore will update (or not) automatically apps it has installed based on these settings</string>
+    <string name="auto_update_title">Auto-update Settings</string>
+
+    <string name="auto_update_schedule_label">Auto-update Schedule</string>
+    <string name="trigger_auto_updates_manually_label">Trigger auto-updating manually</string>
+
+    <string name="auto_update_disabled">Don\'t auto-update apps</string>
+    <string name="auto_update_schedule">Check and update %d minutes</string>
+
+    <string name="update_availability_period_label">Time between install and update availability</string>
+
+    <string name="update_availability_disabled">No updates</string>
+    <string name="update_availability_seconds_period">After %d seconds</string>
+    <string name="update_availability_minutes_period">After %d minutes</string>
+
+    <string name="alert_notification_channel">Alerts</string>
+    <string name="install_notification_title">Install app</string>
+    <string name="install_notification_description">Click here to install the app %s</string>
+    <string name="multiple_install_notification_title">Install apps</string>
+    <string name="multiple_install_notification_description">Click here to install these apps</string>
+
+    <string name="upgrade_notification_channel">Upgrade app</string>
+    <string name="upgrade_notification_title">Upgrade app</string>
+    <string name="upgrade_notification_description">Click here to upgrade the app %s</string>
+    <string name="multiple_upgrades_notification_title">Upgrade apps</string>
+    <string name="multiple_upgrades_notification_description">Click here to upgrade these apps</string>
+</resources>

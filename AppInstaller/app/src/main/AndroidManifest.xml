@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.samples.appinstaller">
+
+    <!-- We use this permission to install apps -->
+    <uses-permission android:name="android.permission.REQUEST_INSTALL_PACKAGES" />
+
+    <!-- We use this permission to uninstall apps -->
+    <uses-permission android:name="android.permission.REQUEST_DELETE_PACKAGES" />
+
+    <!-- We use this permission to update apps with a better user experience -->
+    <uses-permission android:name="android.permission.UPDATE_PACKAGES_WITHOUT_USER_ACTION" />
+
+    <!-- We use this permission to get the list of our installed apps -->
+    <uses-permission
+        android:name="android.permission.QUERY_ALL_PACKAGES"
+        tools:ignore="QueryAllPackagesPermission" />
+
+    <application
+        android:name=".AppInstallerApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.AppInstaller">
+        <activity
+            android:name=".MainActivity"
+            android:label="@string/app_name">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <!-- We receive install, update and uninstall broadcast messages through this receiver -->
+        <!-- The exported flag set to false is important to make sure we only receives broadcast
+        messages from our app or the system as the receiver isn't exposed to other apps -->
+        <receiver
+            android:name=".workers.AppBroadcastReceiver"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="appinstaller_install_status" />
+                <action android:name="appinstaller_uninstall_status" />
+                <action android:name="appinstaller_upgrade_status" />
+            </intent-filter>
+        </receiver>
+    </application>
+
+</manifest>
